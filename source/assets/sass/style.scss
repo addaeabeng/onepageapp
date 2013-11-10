@@ -1,0 +1,483 @@
+@import 'reset';
+@import "../css/bootstrap.css";
+@import "../css/bootstrap-theme.css";
+
+
+$backgroundColor:#fff;
+$fontStack:'Open Sans Light','Open Sans', sans-serif;
+$maxWidth:'970px';
+$boldFontStack:'Open Sans Semibold',sans-serif;
+$exBoldFontStack: 'Open Sans Bold',sans-serif;
+$light: #f6f7f0;
+
+body {
+  color:000;
+  font:100% $fontStack;
+  border:#58595b solid 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font:100% $fontStack;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
+.container {
+  max-width: 970px;
+}
+
+.row {
+  margin-left:0px;
+  margin-right:0px;
+}
+
+p { font-size: 1.4em; }
+strong {font-family:$boldFontStack; font-weight: 700;}
+
+@mixin navigation-list {
+  margin:0;
+  padding:0;
+  list-style:none;
+  > li {
+    display:block;
+    float:left;
+    &:last-child{
+      margin-right:0px;
+    }
+
+    a {
+      display:block;
+      text-decoration:none;
+    }
+  }
+}
+
+@mixin center {
+  margin:0px auto;
+}
+
+.header-nav {
+  height: 186px;
+  @include navigation-list;
+  a{
+    color:#000;
+    line-height: 40px;
+    margin-top:60px;
+    border-bottom:1px solid #000;
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight:'light';
+  }
+  li {
+    width:140px;
+    margin-left:20px;
+    letter-spacing: 3px;
+    &:last-child{margin-right:20px;}
+    &:nth-child(2){margin-right: 160px;}
+  }
+
+  max-width: 820px;
+  @include center;
+}
+
+a.logo {
+  display: block;
+  top:0%;
+  left:50%;
+  margin-top:20px;
+  margin-left: -80px;
+  position: absolute;
+  text-indent: -9999px;
+  background:url(../img/logo.png) center no-repeat;
+  height: 182px;
+  width: 160px;
+  z-index: 10;
+}
+
+.featured {
+  height: 565px;
+  padding-top:34px;
+  background: url(../img/slider-bg.jpg) center no-repeat;
+  .scrolldown{ background: url(../img/scrolldown.png) no-repeat; width:30px; bottom:20px; left:50%; height: 15px; margin:-7.5px 0px 0px -15px;}
+  .header-iphone {
+    background: url(../img/iphone-header.png) center no-repeat;
+    width:397px;
+    height:531px;
+    position: absolute;
+    top:0px;
+    left:72px;
+  }
+}
+
+a.scrolldown { position: absolute; display: block;}
+
+.jumbotron {
+  .container{
+    position: relative;
+  }
+
+  h1, p {
+    color:$light;
+  }
+
+  p.review {
+    margin-bottom: 80px;
+  }
+
+  p { font-size: 1em;}
+
+  h1 {
+    font-size:36px;
+    margin-top: 57px;
+  }
+  p.download {
+    font-size: 35px;
+  }
+  p {line-height: 1.2em;}
+  em {font-family: 'Open Sans';  color: #87d098; font-style:normal;}
+
+}
+
+.app-feature  {
+  h2 { color:#87d098; font-family:$boldFontStack; }
+}
+
+.app-feature {
+  min-height:287px ;
+  margin-bottom: 50px;
+}
+
+.app-feature.filter {
+  min-height: 437px;
+  h2{
+    margin-top: 0px;
+  }
+}
+
+.container-feature {
+  position: relative;
+}
+
+
+.about {
+  padding-top: 70px;
+  background:url(../img/about-bg.png) #58595b top center no-repeat;
+  h2 {
+    font-family: $exBoldFontStack;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 30px;
+    color:$light;
+  }
+
+  h3 {
+    font-family: $fontStack;
+    color:$light;
+    font-size: 2.8em;
+    padding-top: 100px;
+    width: 140px;
+    margin:0px auto;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+
+  }
+
+  h3.ab {
+    background:url(../img/ab.png) center 20px no-repeat;
+  }
+
+  h3.tf {
+    background:url(../img/future.png) center 20px no-repeat;
+  }
+
+  h3.wc {
+    background:url(../img/chat.png) center 20px no-repeat;
+
+  }
+
+  h3.wc {
+    width:160px;
+  }
+
+  p {
+    display: block;
+    width: 140px;
+    color:$light;
+    margin:0px auto;
+  }
+
+  p.wc {
+    width: 160px;
+  }
+
+}
+
+.download-btn {
+  display: block;
+  border-radius: 3px;
+  border:0px;
+  width: 218px;
+  height: 56px;
+  background:url(../img/dl.png) #87d098 no-repeat center;
+  text-indent: -9999px;
+  margin-bottom: 10px;
+}
+
+.social {
+  @include navigation-list;
+  width: 140px;
+  margin: 0px auto;
+  li{ width:50%; height: 80px; margin: 30px 0px;}
+  li.fb { background:url(../img/fb.png) no-repeat center; }
+  li.tw { background:url(../img/tw.png) no-repeat center; }
+}
+
+.row.download {
+  background:url(../img/ftrbg.jpg) no-repeat top center;
+  height: 330px;
+  margin:0px;
+
+  .rating {
+    width:189px;
+    height:29px;
+    background: url(../img/rating.png) no-repeat center;
+    margin: 50px auto 10px;
+  }
+  p { color:$light; text-align: center;}
+  h2 {
+    color:$light; text-align: center; font:3.5em $fontStack;
+    strong {
+      font-family: $boldFontStack;
+    }
+  }
+
+  .download-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.footer-nav {
+  ul{
+   @include navigation-list;
+    a{
+      color:#000;
+      line-height: 50px;
+
+      font-size:16px;
+      text-transform: uppercase;
+      font-weight:'light';
+    }
+    li {
+      width:140px;
+      margin-left:20px;
+      letter-spacing: 3px;
+      &:last-child{margin-right:0px;}
+      &:nth-child(2){margin-right: 160px;}
+    }
+    li.logo {
+      display: block;
+      text-indent: -9999px;
+      background:url(../img/logo.png) center no-repeat;
+      height: 100%;
+    }
+    max-width: 820px;
+    @include center;
+  }
+
+  a.scrolldown {
+    display:none;
+
+  }
+}
+
+.feature-last {
+  margin:0px;
+  border-bottom:1px solid #acadaa;
+}
+
+.get-directions {
+
+  margin:0px 0px 50px 0px;
+  a.scrolldown {
+    position: relative;
+    display: block;
+    width:51px;
+    height: 25px;
+    margin:0px auto;
+    background:url(../img/scrolldown-lrg.png) center no-repeat;
+  }
+
+}
+
+.iphone-directions {
+  position: absolute;
+  left:0px;
+  top:0px;
+}
+
+.iphone-filter {
+  position: absolute;
+  right: 0px;
+  top:0px;
+}
+
+@media(max-width:992px){
+  .header-nav {
+    margin:36px auto 40px;
+    overflow: hidden;
+    height: auto;
+    max-width: 500px;
+    li {
+
+      text-align: center;
+      &:last-child {
+        margin-bottom: 10px !important;
+      }
+      &:nth-child(odd){
+        margin-right: 160px;
+        text-align: left;
+      }
+      &:nth-child(even){
+        margin-right: 0px;
+        text-align: right;
+      }
+      a {
+        margin-top:10px;
+      }
+
+    }
+  }
+
+  .header-iphone {
+    background:url(../img/iphone-header.png) !important;
+
+    background-repeat:no-repeat  !important;
+    background-size:contain  !important;
+    background-position:bottom center  !important;
+    width: 364px !important;
+    left:0px !important;
+  }
+
+  .iphone-directions {
+    width:411px;
+  }
+
+  .iphone-filter {
+    width:372px;
+    right:30px;
+  }
+
+  .footer-nav {
+    li {
+      margin-left:18px !important;
+      text-align: center;
+    }
+  }
+}
+
+
+@media(max-width:767px){
+
+  body {
+   border-left:0px;
+   border-right: 0px;
+  }
+
+  .jumbotron {
+    padding:0px;
+    padding-top: 30px;
+    .download-btn {
+    }
+
+    .scrolldown {
+      bottom: 516px;
+    }
+
+  }
+
+  .header-lcol {
+    text-align: center;
+  }
+
+  .download-btn {
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .header-nav {
+    margin-top:186px;
+    height: auto;
+    li {
+      float:none;
+      margin:0px auto !important;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 10px !important;
+        a{
+          border-bottom: 0px;
+        }
+      }
+      a {
+        margin-top:10px;
+      }
+
+    }
+  }
+
+  .jumbotron {
+    height: auto;
+  }
+
+  .header-iphone {
+    position: relative !important;
+    left:0px !important;
+    margin:0px auto;
+   background:url(../img/iphone-header.png) !important;
+
+    background-repeat:no-repeat  !important;
+    background-size:contain  !important;
+    background-position:bottom center  !important;
+    width: auto !important;
+  }
+
+  .iphone-directions,
+  .iphone-filter {
+    position: relative !important;
+    width: 100%;
+  }
+
+  .iphone-filter {
+    margin-bottom: 50px;
+  }
+
+  .app-feature.filter, .app-feature.directions {
+    height: auto !important;
+    min-height: 0px !important;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    display:none;
+  }
+
+  .footer-nav {
+    a.scrolldown {
+      display: block;
+      position: relative;
+      text-indent:-9999px;
+      width:52px;
+      height: 27px;
+      background: url(../img/scrollup-lrg.png) no-repeat;
+      margin:20px auto;
+    }
+
+  }
+
+}
+
